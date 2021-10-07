@@ -1,0 +1,15 @@
+{
+    "aliases": {},
+    "recipes": {
+        "digital-directories/notifier-bundle": [
+            "1.0"
+        ]
+    },
+    "branch": "master",
+    "is_contrib": true,
+    "_links": {
+        "repository": "github.com/Mon-Avocat-Tech/dd-flex-recipes",
+        "origin_template": "{package}:{version}@github.com/Mon-Avocat-Tech/dd-flex-recipes:master",
+        "recipe_template": "https://api.github.com/repos/Mon-Avocat-Tech/dd-flex-recipes/contents/{package_dotted}.{version}.json?ref=flex/main"
+    }
+}
