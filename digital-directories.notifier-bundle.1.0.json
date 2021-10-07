@@ -1,0 +1,32 @@
+{
+    "manifests": {
+        "digital-directories/notifier-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DigitalDirectories\\NotifierBundle\\DigitalDirectoriesNotifierBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DD_NOTIFIER_API_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Modify your DD_NOTIFIER_API_KEY config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/doctrine.yaml": {
+                    "contents": [
+                        "digital_directories_notifier:",
+                        "    api_key: \"%env(DD_NOTIFIER_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            }
+        }
+    }
+}
