@@ -23,7 +23,7 @@
                 "config/packages/digital_directories_media.yaml": {
                     "contents": [
                         "digital_directories_notifier:",
-                        "    api_key: \"%env(DD_MEDIA_HOST)%\"",
+                        "    host: \"%env(DD_MEDIA_HOST)%\"",
                         "    api_key: \"%env(DD_MEDIA_API_KEY)%\"",
                         ""
                     ],
