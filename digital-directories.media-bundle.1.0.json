@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "digital-directories/media-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DigitalDirectories\\MediaBundle\\DigitalDirectoriesMediaBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DD_MEDIA_HOST": "",
+                    "DD_MEDIA_API_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Modify your DD_MEDIA_HOST config in <fg=green>.env</>",
+                    "  * Modify your DD_MEDIA_API_KEY config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/digital_directories_media.yaml": {
+                    "contents": [
+                        "digital_directories_notifier:",
+                        "    api_key: \"%env(DD_MEDIA_HOST)%\"",
+                        "    api_key: \"%env(DD_MEDIA_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
+        }
+    }
+}
