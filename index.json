@@ -3,6 +3,9 @@
     "recipes": {
         "digital-directories/notifier-bundle": [
             "1.0"
+        ],
+        "digital-directories/media-bundle": [
+            "1.0"
         ]
     },
     "branch": "main",
