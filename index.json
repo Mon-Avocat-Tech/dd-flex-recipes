@@ -6,6 +6,9 @@
         ],
         "digital-directories/media-bundle": [
             "1.0"
+        ],
+        "digital-directories/url-shortener-bundle": [
+            "1.0"
         ]
     },
     "branch": "main",
