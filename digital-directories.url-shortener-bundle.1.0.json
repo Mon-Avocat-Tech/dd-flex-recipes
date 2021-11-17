@@ -1,0 +1,36 @@
+{
+    "manifests": {
+        "digital-directories/url-shortener-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DigitalDirectories\\UrlShortener\\DigitalDirectoriesUrlShortenerBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DD_URL_SHORTENER_HOST": "",
+                    "DD_URL_SHORTENER_API_KEY": ""
+                },
+                "post-install-output": [
+                    "  * Modify your DD_URL_SHORTENER_HOST config in <fg=green>.env</>",
+                    "  * Modify your DD_URL_SHORTENER_API_KEY config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/digital_directories_url_shortener.yaml": {
+                    "contents": [
+                        "digital_directories_url_shortener:",
+                        "    host: \"%env(DD_URL_SHORTENER_HOST)%\"",
+                        "    api_key: \"%env(DD_URL_SHORTENER_API_KEY)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
+        }
+    }
+}
