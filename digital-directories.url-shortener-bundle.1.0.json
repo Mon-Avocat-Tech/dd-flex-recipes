@@ -3,7 +3,7 @@
         "digital-directories/url-shortener-bundle": {
             "manifest": {
                 "bundles": {
-                    "DigitalDirectories\\UrlShortener\\DigitalDirectoriesUrlShortenerBundle": [
+                    "DigitalDirectories\\UrlShortenerBundle\\DigitalDirectoriesUrlShortenerBundle": [
                         "all"
                     ]
                 },
