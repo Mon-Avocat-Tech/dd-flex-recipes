@@ -27,7 +27,7 @@
                         "digital_directories_wordpress_rest_api:",
                         "    host: \"%env(DD_WP_REST_API_HOST)%\"",
                         "    username: \"%env(DD_WP_REST_API_USERNAME)%\"",
-                        "    username: \"%env(DD_WP_REST_API_PASSWORD)%\"",
+                        "    password: \"%env(DD_WP_REST_API_PASSWORD)%\"",
                         ""
                     ],
                     "executable": false
