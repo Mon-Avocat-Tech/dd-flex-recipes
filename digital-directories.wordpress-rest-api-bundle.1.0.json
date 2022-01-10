@@ -1,0 +1,39 @@
+{
+    "manifests": {
+        "digital-directories/wordpress-rest-api-bundle": {
+            "manifest": {
+                "bundles": {
+                    "DigitalDirectories\\WordpressRestApiBundle\\DigitalDirectoriesWordpressRestApiBundle": [
+                        "all"
+                    ]
+                },
+                "copy-from-recipe": {
+                    "config/": "%CONFIG_DIR%/"
+                },
+                "env": {
+                    "DD_WP_REST_API_HOST": "",
+                    "DD_WP_REST_API_USERNAME": "",
+                    "DD_WP_REST_API_PASSWORD": ""
+                },
+                "post-install-output": [
+                    "  * Modify your DD_WP_REST_API_HOST config in <fg=green>.env</>",
+                    "  * Modify your DD_WP_REST_API_USERNAME config in <fg=green>.env</>",
+                    "  * Modify your DD_WP_REST_API_PASSWORD config in <fg=green>.env</>"
+                ]
+            },
+            "files": {
+                "config/packages/digital_directories_wordpress_rest_api.yaml": {
+                    "contents": [
+                        "digital_directories_wordpress_rest_api:",
+                        "    host: \"%env(DD_WP_REST_API_HOST)%\"",
+                        "    username: \"%env(DD_WP_REST_API_USERNAME)%\"",
+                        "    username: \"%env(DD_WP_REST_API_PASSWORD)%\"",
+                        ""
+                    ],
+                    "executable": false
+                }
+            },
+            "ref": "703c6453b039330753a7ae6cebd0af8ab1d770d8"
+        }
+    }
+}
