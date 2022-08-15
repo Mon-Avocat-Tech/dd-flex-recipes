@@ -16,7 +16,10 @@
                 },
                 "post-install-output": [
                     "  * Modify your DD_MEDIA_HOST config in <fg=green>.env</>",
-                    "  * Modify your DD_MEDIA_API_KEY config in <fg=green>.env</>"
+                    "  * Modify your DD_MEDIA_API_KEY config in <fg=green>.env</>",
+                    "  * Add private_media_preview_route",
+                    "  * Add should_rewrite_domain",
+                    "  * Add domain"
                 ]
             },
             "files": {
@@ -25,6 +28,9 @@
                         "digital_directories_media:",
                         "    host: \"%env(DD_MEDIA_HOST)%\"",
                         "    api_key: \"%env(DD_MEDIA_API_KEY)%\"",
+                        "    private_media_preview_route: \"\",
+                        "    should_rewrite_domain: \"\",
+                        "    domain: \"\"
                         ""
                     ],
                     "executable": false
